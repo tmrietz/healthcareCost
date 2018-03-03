@@ -1,0 +1,9 @@
+.navbar-nav > .nav-item.nav-link:hover, .navbar-nav > .nav-item.dropdown > .dropdown-toggle:hover {
+    color: lightseagreen;
+}
+
+footer>p.container-fluid{
+    vertical-align: bottom;
+    color: white;
+    background-color: lightseagreen;
+}
