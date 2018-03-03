@@ -3,13 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <!-- Title should change for each page we make -->
         <title>SKELETON</title>
+        
         <!-- Bootstrap: http://getbootstrap.com -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <!-- Let's not put any styling specific to the given page in this stylesheet. Intended for styling elements shared between all pages -->
         <link rel="stylesheet" type="text/css" href="./sharedStyles.css">
+        
+        <!-- And let's put a different stylesheet here for elements added and distincly belonging to the specific page -->
+        
     </head>
     <body>
+        <!-- Important: Wrapper for body to allow a sticky footer -->
         <div id="bodyContent">
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navigation">
                 <a class="navbar-brand" href="#PROBABLY THE HOME PAGE?">PUT BRAND HERE</a>
@@ -19,6 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active" id="home" href="#INSERT HOME PAGE HTML FILE HERE">Home<span class="sr-only">(current)</span></a>
+                        <!-- Medical Costs is a dropdown, with 'get' and 'contribute' options. Maybe we want just a single page for those? -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#PUT EITHER FIND OR CONTRIBUTE COST PAGE HERE" id="costs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Medical Costs
@@ -28,6 +36,7 @@
                                 <a class="dropdown-item" href="#CONTRIBUTE COST INFORMATION HTML PAGE">Contribute information</a>
                             </div>
                         </li>
+                        <!-- Feel free to change the order here -->
                         <a class="nav-item nav-link" id="forum" href="#INSERT FORUM PAGE HTML FILE HERE">Forum</a>
                         <a class="nav-item nav-link" id="login" href="INSERT LOGIN PAGE HTML FILE HERE">Login</a>
                         <a class="nav-item nav-link" id="about" href="INSERT ABOUT US HTML FILE HERE">About Us</a>
@@ -35,15 +44,16 @@
                     </div>
                 </div>
             </nav>
-        <!-- PAGE-SPECIFIC CONTENT HERE -->
+            <!-- Page-specific content should go in this div -->
             <div class="container">
-                <p class=>
+                <p>
                     A bunch of body stuff here.
                 </p>
             </div>
         </div>
+        <!-- Consistent footer content across all pages -->
         <footer>
-            <!-- FOOTER CONTENT SHOULD PROBABLY BE CONSISTENT THROUGHOUT ALL PAGES -->
+            <!-- Site navigation links -->
             <div class="container" id="footerCont">
                 <div id="navLinks">
                     <label for="">Navigation</label>
@@ -57,6 +67,7 @@
                         <li><a href="#CONTACT US">Contact</a></li>
                     </ul>
                 </div>
+                <!-- Site development and technologies links -->
                 <div id="devLinks">
                     <label for="">Development</label>
                     <ul>
@@ -68,6 +79,7 @@
                     </ul>
     
                 </div>
+                <!-- Us! Maybe we want this, maybe not. I don't know. But if this ever goes live, could be good. -->
                 <div id="contributors">
                     <label for="">Contributors</label>
                     <ul>
@@ -79,6 +91,7 @@
                         <li><a href="#github/linkedin/email">Taylor Rietz</a></li>
                     </ul>
                 </div>
+                <!-- Again, if this ever goes live... feels like a footer might be a good spot for it. -->
                 <div id="sponsors">
                     <label for="">Sponsors</label>
                     <ul>
@@ -90,12 +103,11 @@
                 </div>
             </div>
         </footer>
-        <!-- ADDITIONAL JS SCRIPTS HERE -->
+        <!-- Insert additional .js files here to make pages do useful things, like AJAX requests to db -->
+        
+        <!-- Let's leave these alone, if we want to use Bootstrap and want it to work as expected -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
-
-        
-
 </html>
