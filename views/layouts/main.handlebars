@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Title should change for each page we make -->
-        <title>ABOUT</title>
+        <title>SKELETON</title>
         
         <!-- Bootstrap: http://getbootstrap.com -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         
         <!-- Let's not put any styling specific to the given page in this stylesheet. Intended for styling elements shared between all pages -->
-        <link rel="stylesheet" type="text/css" href="./sharedStyles.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/sharedStyles.css">
         
         <!-- And let's put a different stylesheet here for elements added and distincly belonging to the specific page -->
         
@@ -25,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" id="home" href="#INSERT HOME PAGE HTML FILE HERE">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link active" id="home" href="/html/create_account.html">Home<span class="sr-only">(current)</span></a>
                         <!-- Medical Costs is a dropdown, with 'get' and 'contribute' options. Maybe we want just a single page for those? -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#PUT EITHER FIND OR CONTRIBUTE COST PAGE HERE" id="costs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,29 +39,14 @@
                         <!-- Feel free to change the order here -->
                         <a class="nav-item nav-link" id="forum" href="#INSERT FORUM PAGE HTML FILE HERE">Forum</a>
                         <a class="nav-item nav-link" id="login" href="INSERT LOGIN PAGE HTML FILE HERE">Login</a>
-                        <a class="nav-item nav-link" id="about" href="INSERT ABOUT US HTML FILE HERE">About Us</a>
-                        <a class="nav-item nav-link" id="contact" href="INSERT CONTACT US HTML FILE HERE">Contact Us</a>
+                        <a class="nav-item nav-link" id="about" href="/html/about.html">About Us</a>
+                        <a class="nav-item nav-link" id="contact" href="/html/contact.html">Contact Us</a>
                     </div>
                 </div>
             </nav>
             <!-- Page-specific content should go in this div -->
             <div class="container">
-
-                <h1>About Us</h1>
-                <p>
-                        We provide consumers with accurate information about average costs for medical procedures at 
-                        the local, state and national levels. Medical costs in the United States can vary widely
-                        based on the medical facility being used, the medical procedure
-                        in question, and the insurance coverage that an individual has. Ideally, the
-                        medical industry would be more transparent and provide comprehensive cost data on medical procedures. Unfortunately, 
-                        there are no signs that the status quo will change. 
-                        <br>
-                        <br>
-                        <strong>Our mission is to proivde easy-to-access healthcare cost 
-                        information that will empower consumers to made educated decisions when 
-                        selecting doctors, insurance providers and medical care facilities.</strong>
-                </p>
-
+                {{{body}}}
             </div>
         </div>
         <!-- Consistent footer content across all pages -->
