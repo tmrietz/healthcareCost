@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Title should change for each page we make -->
-        <title>CONTACT</title>
+        <title>Find Information</title>
         
         <!-- Bootstrap: http://getbootstrap.com -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         
         <!-- Let's not put any styling specific to the given page in this stylesheet. Intended for styling elements shared between all pages -->
-        <link rel="stylesheet" type="text/css" href="/stylesheets/sharedStyles.css">
+        <link rel="stylesheet" type="text/css" href="/html/sharedStyles.css">
         
         <!-- And let's put a different stylesheet here for elements added and distincly belonging to the specific page -->
         
@@ -45,24 +44,87 @@
                 </div>
             </nav>
             <!-- Page-specific content should go in this div -->
-            <div class="container">
+            <br><br>
+            <div style="text-indent: 20%";>
+            <h2>Medical Procedure Search Criteria</h2>
+            </div>
+            <br>
+            <div class="container" style="border:1px solid black";> 
+                <p>
+                 
+                    <form>
+                        
+                      <h5> For best results, enter as much information as possible</h5>                      
+                      <br>
+                      <div class="form-row">
 
-                <h1>Contact Us</h1>
-                <p>Please feel free to reach out to us via the channels listed below.</p>
-                <br>
-                <br>
-                <h3>Email</h3>
-                <br>
-                <h3>Phone</h3>
-                <br>
-                <h3>Facebook</h3>
-                <br>
-                <h3>Twitter</h3>
-                <br>
-                <h3>Mailing Address</h3>
-                <br>
+                        <div class="form-group col-md-6">
+                          <label for="location">Enter location</label>
+                          <input type="text" class="form-control" id="location" placeholder="City, State or Zip Code" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label for="history">Enter medical history </label>
+                          <input type="text" class="form-control" id="history" placeholder="(Optional)">
+                        </div>
+
+                      </div>  
 
 
+                      <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                          <label></label>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <a href ="#History">+ Medical History</a>
+                        </div>
+
+
+                      </div> 
+
+
+                      <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                          <label for="procedure">Enter procedure</label>
+                          <input type="text" class="form-control" id="procedure" placeholder="Begin typing name of procedure or ICD-10 code" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label for="insuranceplan">Enter insurance plan </label>
+                          <input type="text" class="form-control" id="insuranceplan" placeholder="(Optional)">
+                        </div>
+
+                      </div>                        
+
+                      <br>
+
+                      <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                          <label for="dob">Enter date of birth</label>
+                          <input type="date" class="form-control" id="dob" placeholder="(Optional)">
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                                                    
+                            <div class="btn-group" style="padding: 5% 0";>
+                               <button type="button" class="btn btn-info btn-lg" style="margin-left: 30%";>Search</button>
+                               <button type="button" class="btn btn-outline-info btn-sm" style="margin-left: 60%";>Clear</button>
+                               <button type="button" class="btn btn-outline-info btn-sm" style="margin-left: 10%";>Cancel</button>
+                            </div>   
+                        </div>   
+                      </div>  
+
+                      <br>
+
+
+
+                    </form>
+                </p>
             </div>
         </div>
         <!-- Consistent footer content across all pages -->
