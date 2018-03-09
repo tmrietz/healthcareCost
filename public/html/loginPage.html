@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Title should change for each page we make -->
+        <title>ABOUT</title>
+
+        <!-- Bootstrap: http://getbootstrap.com -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Let's not put any styling specific to the given page in this stylesheet. Intended for styling elements shared between all pages -->
+        <link rel="stylesheet" type="text/css" href="/stylesheets/sharedStyles.css">
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- And let's put a different stylesheet here for elements added and distincly belonging to the specific page -->
+
+    </head>
+    <body>
+        <!-- Important: Wrapper for body to allow a sticky footer -->
+        <div id="bodyContent">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navigation">
+                <a class="navbar-brand" href="/">PUT BRAND HERE</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" id="home" href="/html/create_account.html">Home<span class="sr-only">(current)</span></a>
+                        <!-- Medical Costs is a dropdown, with 'get' and 'contribute' options. Maybe we want just a single page for those? -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#PUT EITHER FIND OR CONTRIBUTE COST PAGE HERE" id="costs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Medical Costs
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#GET COST INFORMATION HTML PAGE">Find information</a>
+                                <a class="dropdown-item" href="#CONTRIBUTE COST INFORMATION HTML PAGE">Contribute information</a>
+                            </div>
+                        </li>
+                        <!-- Feel free to change the order here -->
+                        <a class="nav-item nav-link" id="forum" href="#INSERT FORUM PAGE HTML FILE HERE">Forum</a>
+                        <a class="nav-item nav-link" id="login" href="INSERT LOGIN PAGE HTML FILE HERE">Login</a>
+                        <a class="nav-item nav-link" id="about" href="/html/about.html">About Us</a>
+                        <a class="nav-item nav-link" id="contact" href="/html/contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page-specific content should go in this div -->
+            <div class="container-fluid">
+							<div style="height:100px;"></div>
+							<div class="container-fluid" style="text-align:center;">
+								<h2>Welcome</h2>
+							</div>
+							<div style="height:50px;"></div>
+							<div class="border" >
+								<div class="row">
+									<div class="col-md">
+										<div class="border" style="padding:30px; margin:20px;">
+											<h3 style="text-align:center;">Login</h3>
+											<form>
+												<div class="form-group">
+													<label for="emailAddress">Email address</label>
+													<input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter email">
+													<p></p>
+													<label for="userPW">Password</label>
+													<input type="password" class="form-control" id="userPW" aria-describedby="pwHelp" placeholder="Enter password">
+													<button type="button" class="btn btn-primary" style="margin-top:10px">Login</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="col-md">
+										<div class="border" style="padding:30px; margin:20px;flex:1;">
+											<h3 style="text-align:center;">Or create an account</h3>
+											<form>
+												<div class="form-group">
+													<label for="exampleInputEmail1">Email address</label>
+    											<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    											<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+													<button type="button" class="btn btn-primary" style="margin-top:10px">Register</button>
+												</div>
+											</form>
+										</div>
+
+									</div>
+								</div>
+							</div>
+            </div>
+        </div>
+        <!-- Consistent footer content across all pages -->
+        <footer>
+            <!-- Site navigation links -->
+            <div class="container" id="footerCont">
+                <div id="navLinks">
+                    <label for="">Navigation</label>
+                    <ul>
+                        <li><a href="#HOME">Home</a></li>
+                        <li><a href="#GET COST">Find cost</a></li>
+                        <li><a href="#CONTRIBUTE COST">Get cost</a></li>
+                        <li><a href="#FORUM">Forum</a></li>
+                        <li><a href="#LOGIN">Login</a></li>
+                        <li><a href="#ABOUT US">About</a></li>
+                        <li><a href="#CONTACT US">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Site development and technologies links -->
+                <div id="devLinks">
+                    <label for="">Development</label>
+                    <ul>
+                        <li><a href="https://github.com/tmrietz/healthcareCost">GitHub</a></li>
+                        <li><a href="#">Link to some framework</a></li>
+                        <li><a href="#">Link to some framework</a></li>
+                        <li><a href="#">Link to some framework</a></li>
+                        <li><a href="#">Link to some framework</a></li>
+                    </ul>
+
+                </div>
+                <!-- Us! Maybe we want this, maybe not. I don't know. But if this ever goes live, could be good. -->
+                <div id="contributors">
+                    <label for="">Contributors</label>
+                    <ul>
+                        <li><a href="#github/linkedin/email">Ann Kostecki</a></li>
+                        <li><a href="#github/linkedin/email">Dominic Phan</a></li>
+                        <li><a href="#github/linkedin/email">Joshua Herrera</a></li>
+                        <li><a href="#github/linkedin/email">Robert Welch</a></li>
+                        <li><a href="#github/linkedin/email">Russell Moon</a></li>
+                        <li><a href="#github/linkedin/email">Taylor Rietz</a></li>
+                    </ul>
+                </div>
+                <!-- Again, if this ever goes live... feels like a footer might be a good spot for it. -->
+                <div id="sponsors">
+                    <label for="">Sponsors</label>
+                    <ul>
+                        <li><a href="">Link to some sponsor</a></li>
+                        <li><a href="">Link to some sponsor</a></li>
+                        <li><a href="">Link to some sponsor</a></li>
+                        <li><a href="">Link to some sponsor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Insert additional .js files here to make pages do useful things, like AJAX requests to db -->
+
+        <!-- Let's leave these alone, if we want to use Bootstrap and want it to work as expected -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
