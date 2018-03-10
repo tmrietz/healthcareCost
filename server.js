@@ -14,7 +14,7 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.get('/', function(req,res){
-    res.render('test');
+    res.render('landing');
 });
 
 

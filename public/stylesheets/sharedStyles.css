@@ -28,6 +28,7 @@ body>div.container{
 *   Footer color should stay on bottom (sticky)
 *************************************************************************************************************/
 footer{
+    margin-top: 20px;
     bottom: 0px;
 }
 
@@ -35,6 +36,7 @@ footer{
 *   Footer color and font-size should be consistent
 *************************************************************************************************************/
 footer>#footerCont{
+    padding-top: 5px;
     color: lightseagreen;
     font-size: 14px;
     background-color: none;
