@@ -17,6 +17,11 @@ app.get('/', function(req,res){
     res.render('landing');
 });
 
+app.post('/localQuery', function(req, res){
+	console.log(req.body);
+	console.log("post route hit");
+	res.redirect('/');
+});
 
 
 app.use(function(req,res){
@@ -31,6 +36,8 @@ app.use(function(err, req, res, next){
   res.render('500');
 });
 
-app.listen(app.get('port'), function(){
-  console.log('Express started on http://flip1.engr.oregonstate.edu:' + app.get('port') + '; press Ctrl-C to terminate.');
-});
+// app.listen(app.get('port'), function(){
+//   console.log('Express started on http://flip1.engr.oregonstate.edu:' + app.get('port') + '; press Ctrl-C to terminate.');
+// });
+
+app.listen(3000,'localhost');

@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Find Information</title>
-        
+
         <!-- Bootstrap: http://getbootstrap.com -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
+
         <!-- Let's not put any styling specific to the given page in this stylesheet. Intended for styling elements shared between all pages -->
         <link rel="stylesheet" type="text/css" href="/stylesheets/sharedStyles.css">
-        
+
         <!-- And let's put a different stylesheet here for elements added and distincly belonging to the specific page -->
-        
+
     </head>
     <body>
         <!-- Important: Wrapper for body to allow a sticky footer -->
@@ -49,26 +49,26 @@
             <h2>Medical Procedure Search Criteria</h2>
             </div>
             <br>
-            <div class="container" style="border:1px solid black";> 
+            <div class="container" style="border:1px solid black";>
                 <p>
-                 
-                    <form>
-                        
-                      <h5> For best results, enter as much information as possible</h5>                      
+
+                    <form action="/localQuery" method="POST">
+
+                      <h5> For best results, enter as much information as possible</h5>
                       <br>
                       <div class="form-row">
 
                         <div class="form-group col-md-6">
                           <label for="location">Enter location</label>
-                          <input type="text" class="form-control" id="location" placeholder="City, State or Zip Code" required>
+                          <input type="text" class="form-control" id="location" name="location" placeholder="City, State or Zip Code" required>
                         </div>
 
                         <div class="form-group col-md-6">
                           <label for="history">Enter medical history </label>
-                          <input type="text" class="form-control" id="history" placeholder="(Optional)">
+                          <input type="text" class="form-control" id="history" name="history" placeholder="(Optional)">
                         </div>
 
-                      </div>  
+                      </div>
 
 
                       <div class="form-row">
@@ -82,22 +82,22 @@
                         </div>
 
 
-                      </div> 
+                      </div>
 
 
                       <div class="form-row">
 
                         <div class="form-group col-md-6">
                           <label for="procedure">Enter procedure</label>
-                          <input type="text" class="form-control" id="procedure" placeholder="Begin typing name of procedure or ICD-10 code" required>
+                          <input type="text" class="form-control" id="procedure" name="procedure" placeholder="Begin typing name of procedure or ICD-10 code" required>
                         </div>
 
                         <div class="form-group col-md-6">
                           <label for="insuranceplan">Enter insurance plan </label>
-                          <input type="text" class="form-control" id="insuranceplan" placeholder="(Optional)">
+                          <input type="text" class="form-control" id="insuranceplan" name="insuranceplan" placeholder="(Optional)">
                         </div>
 
-                      </div>                        
+                      </div>
 
                       <br>
 
@@ -105,19 +105,19 @@
 
                         <div class="form-group col-md-6">
                           <label for="dob">Enter date of birth</label>
-                          <input type="date" class="form-control" id="dob" placeholder="(Optional)">
+                          <input type="date" class="form-control" id="dob" name="dob" placeholder="(Optional)">
                         </div>
 
 
                         <div class="form-group col-md-6">
-                                                    
+
                             <div class="btn-group" style="padding: 5% 0";>
-                               <button type="button" class="btn btn-info btn-lg" style="margin-left: 30%";>Search</button>
+                               <button type="submit" class="btn btn-info btn-lg" style="margin-left: 30%";>Search</button>
                                <button type="button" class="btn btn-outline-info btn-sm" style="margin-left: 60%";>Clear</button>
                                <button type="button" class="btn btn-outline-info btn-sm" style="margin-left: 10%";>Cancel</button>
-                            </div>   
-                        </div>   
-                      </div>  
+                            </div>
+                        </div>
+                      </div>
 
                       <br>
 
@@ -153,7 +153,7 @@
                         <li><a href="#">Link to some framework</a></li>
                         <li><a href="#">Link to some framework</a></li>
                     </ul>
-    
+
                 </div>
                 <!-- Us! Maybe we want this, maybe not. I don't know. But if this ever goes live, could be good. -->
                 <div id="contributors">
@@ -180,7 +180,7 @@
             </div>
         </footer>
         <!-- Insert additional .js files here to make pages do useful things, like AJAX requests to db -->
-        
+
         <!-- Let's leave these alone, if we want to use Bootstrap and want it to work as expected -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
