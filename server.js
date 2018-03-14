@@ -18,9 +18,25 @@ app.get('/', function(req,res){
 });
 
 app.post('/localQuery', function(req, res){
-	console.log(req.body);
-	console.log("post route hit");
-	res.redirect('/');
+	// Test data
+	var sampleProcedures = {
+		procedure1: {
+			name: "kneeSurgery",
+			cost: 10000
+		},
+		procedure2: {
+			name: "coldCheckup",
+			cost: 10
+		}
+	};
+	var context = {};
+	for (var procedure in sampleProcedures) {
+		if (req.body.procedure == sampleProcedures[procedure].name) {
+			context.cost = sampleProcedures[procedure].cost;
+			context.name = sampleProcedures[procedure].name;
+		}
+	}
+	res.render('queryResults', context);
 });
 
 
