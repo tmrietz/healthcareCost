@@ -33,7 +33,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="/html/search_criteria.html">Find information</a>
-                                <a class="dropdown-item" href="#CONTRIBUTE COST INFORMATION HTML PAGE">Contribute information</a>
+                                <a class="dropdown-item" href="/submission">Contribute information</a>
                             </div>
                         </li>
                         <!-- Feel free to change the order here -->
@@ -56,6 +56,47 @@
                       <a class="nav-item nav-link" href="#">Messages</a>
                     </nav>
 
+                    <script>  
+
+                        var x=1
+                        function appendRow()
+                        {
+                           var d = document.getElementById('div');
+                           d.innerHTML += "<input type='text' style='width: 1000px; height: 50px;' placeholder='Subject' id='title"+ x++ +"'><br >";
+                           d.innerHTML += "<textarea type='text' style='width: 1000px; height: 300px;' placeholder='Message' id='tst"+ x++ +"'></textarea>";
+                           d.innerHTML += "<br><br>"
+                           d.innerHTML += "<button class='btn btn-primary float-left' id='submitnew"+ x++ +"'>Submit</button><br >";
+                           d.innerHTML += "<br><br>"
+
+                           document.getElementById('submitnew3').onclick = 
+                           function appendtable(){
+                                var tab = document.getElementById("discussion");
+                                var row = tab.insertRow(-1);
+                                var th = document.createElement("th");
+                                var ti = document.getElementById("title1");
+                                var s = document.getElementById("tst2");
+                                var tx = ti.value;
+                                var a = document.createElement('a');
+                                var t = document.createTextNode(tx);
+                                var b = document.getElementById("submitnew3");
+
+                                a.appendChild(t);
+                                a.href = "#";
+
+                                th.appendChild(a);
+                                th.setAttribute("scope", "row");
+                                th.setAttribute("style", "text-indent: 2%"); 
+                                tab.appendChild(th);
+
+                                d.removeChild(ti);
+                                d.removeChild(s);
+                                d.removeChild(b);
+                           }
+
+                        }
+
+                    </script>
+
                     <form>
                       <div class="row float-right">
                         <div class="col">
@@ -65,7 +106,7 @@
                       
                     </form>
 
-                    <table class="table table-hover table-bordered" style="margin-top: 10%">
+                    <table id="discussion" class="table table-hover table-bordered" style="margin-top: 10%">
                       <thead class="thead-light">
                         <tr>
                           <th scope="col">DISCUSSION BOARDS</th>
@@ -89,7 +130,10 @@
                       </tr>
                       </tbody>
                     </table>
-                    <button type="submit" class="btn btn-primary float-right">Create New Discussion</button>
+                    <div id="div">
+                        <button onclick ="appendRow()" value="Add Row" class="btn btn-primary float-right">Add New Discussion</button>
+                        <br><br>
+                    </div>
                 </p>
             </div>
         </div>
@@ -102,7 +146,7 @@
                     <ul>
                         <li><a href="/html/create_account.html">Home</a></li>
                         <li><a href="/html/search_criteria.html">Find cost</a></li>
-                        <li><a href="#CONTRIBUTE COST">Get cost</a></li>
+                        <li><a href="/submission">Get cost</a></li>
                         <li><a href="/html/forums.html">Forum</a></li>
                         <li><a href="/html/loginPage.html">Login</a></li>
                         <li><a href="/html/about.html">About</a></li>
