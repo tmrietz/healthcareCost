@@ -17,6 +17,27 @@ app.get('/', function(req,res){
     res.render('landing');
 });
 
+app.post('/localQuery', function(req, res){
+	// Test data
+	var sampleProcedures = {
+		procedure1: {
+			name: "kneeSurgery",
+			cost: 10000
+		},
+		procedure2: {
+			name: "coldCheckup",
+			cost: 10
+		}
+	};
+	var context = {};
+	for (var procedure in sampleProcedures) {
+		if (req.body.procedure == sampleProcedures[procedure].name) {
+			context.cost = sampleProcedures[procedure].cost;
+			context.name = sampleProcedures[procedure].name;
+		}
+	}
+	res.render('queryResults', context);
+});
 
 
 app.use(function(req,res){
@@ -34,3 +55,5 @@ app.use(function(err, req, res, next){
 app.listen(app.get('port'), function(){
   console.log('Express started on http://flip1.engr.oregonstate.edu:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
+
+// app.listen(3000,'localhost');
