@@ -19,7 +19,7 @@ app.get('/', function(req,res){
 });
 
 
-app.get('/contribute', function(req,res){
+app.get('/submission', function(req,res){
 	var context = {};
 	res.render('submission', context);
 });
