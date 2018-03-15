@@ -1,0 +1,75 @@
+<h2>Medical Procedure Entry</h2>
+<div class="container" style="border:1px solid black";>
+    <h5> For best results, enter as much information as possible</h5><br>
+    <form action="/contribute" method="POST">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="location">Enter location</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="City, State or Zip Code" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="history">Enter medical history </label>
+                <input type="text" class="form-control" id="history" name="history" placeholder="(Optional)">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label></label>
+            </div>
+            <div class="form-group col-md-6">
+                <a href ="#History">+ Medical History</a>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="procedure">Enter procedure</label>
+                <input type="text" class="form-control" id="procedure" name="procedure" placeholder="Begin typing name of procedure or ICD-10 code" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="provider">Enter provider</label>
+                <input type="text" class="form-control" id="provider" name="provider" placeholder="Enter your provider" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="insuranceplan">Enter insurance plan</label>
+                <input type="text" class="form-control" id="insuranceplan" name="insuranceplan" placeholder="(Optional)">
+            </div>
+        </div><br>
+        
+        
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="dob">Enter date of birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" placeholder="(Optional)">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="date">Enter procedure date</label>
+                <input type="date" class="form-control" id="date" name="date" placeholder="(Optional)">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="cost">Enter cost</label>
+                <input type="text" class="form-control" id="cost" name="cost" placeholder="Cost" required>
+            </div>
+            <button type="submit" class="btn btn-info btn-sm">Submit</button>
+        </div><br>
+    </form>
+</div>
+
+
+<h1>{{message}}</h1>
+<div class="media">
+    <h3>${{cost}} </h3>
+    <div class="media-body">
+        <h5>{{procedure}} by {{provider}}</h5>
+        <ul>
+            <li>{{date}}</li>
+            <li>{{location}}</li>
+            <li>{{plan}}</li>
+            <li>{{history}}</li>
+            <li>{{dob}}</li>   
+        </ul>
+    </div>
+</div>

@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 var app = express();
-app.set('port', 8913);
+app.set('port', 8914);
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,9 +13,38 @@ app.use(express.static('public'));
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
+
 app.get('/', function(req,res){
     res.render('landing');
 });
+
+
+app.get('/contribute', function(req,res){
+	var context = {};
+	res.render('submission', context);
+});
+
+
+app.post('/submitted', function(req,res){
+	var context = {};
+	context.cost = req.body.cost;
+	context.history = req.body.history;
+	context.provider = req.body.provider;
+	context.location = req.body.location;
+	context.procedure = req.body.procedure;
+	context.plan = req.body.insuranceplan;
+	context.dob = req.body.dob;
+	context.date = req.body.date;
+	if(res.statusCode>=200 && res.statusCode<400){
+		context.message = "Submitted successfully!";
+	} else {
+		context.message = "Failed to submit, try again.";
+	}
+	
+	//res.send(context);
+	res.render('submitted', context);
+});
+
 
 app.post('/localQuery', function(req, res){
 	// Test data
