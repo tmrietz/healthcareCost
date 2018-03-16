@@ -1,7 +1,7 @@
 <h2>Medical Procedure Entry</h2>
 <div class="container" style="border:1px solid black";>
     <h5> For best results, enter as much information as possible</h5><br>
-    <form action="/contribute" method="POST">
+    <form action="/submitted" method="POST">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="location">Enter location</label>
@@ -49,11 +49,11 @@
                 <label for="date">Enter procedure date</label>
                 <input type="date" class="form-control" id="date" name="date" placeholder="(Optional)">
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
                 <label for="cost">Enter cost</label>
                 <input type="text" class="form-control" id="cost" name="cost" placeholder="Cost" required>
+                <button type="submit" class="btn btn-info btn-sm">Submit</button>
             </div>
-            <button type="submit" class="btn btn-info btn-sm">Submit</button>
         </div><br>
     </form>
 </div>
