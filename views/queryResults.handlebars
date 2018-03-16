@@ -1,4 +1,20 @@
-<h1>Query results</h1>
 
-<p>Procedure name: {{name}}</p>
-<p>Medical costs: {{cost}}</p>
+
+
+<br><br>
+<div style="text-indent: 20%";>
+<h1>Query Results</h1>
+</div>
+<br>
+<div class="container" style="border:1px solid black";>
+	{{#if name}}
+		<p><h4>Procedure name: </h4>{{name}}</p>
+		<p><h4>Medical costs: </h4>{{cost}}</p>
+		<a role="button" class="btn btn-primary" href="/html/search_criteria.html">Search again</a>
+	{{else}}
+		<p>We're sorry, your query returned no results. Please try again.</p>
+		<a role="button" class="btn btn-danger" href="/html/search_criteria.html">Try again</a>
+	{{/if}}
+	<p></p>
+</div>
+</div>

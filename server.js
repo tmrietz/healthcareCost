@@ -40,7 +40,7 @@ app.post('/submitted', function(req,res){
 	} else {
 		context.message = "Failed to submit, try again.";
 	}
-	
+
 	//res.send(context);
 	res.render('submitted', context);
 });
@@ -50,17 +50,25 @@ app.post('/localQuery', function(req, res){
 	// Test data
 	var sampleProcedures = {
 		procedure1: {
-			name: "kneeSurgery",
+			name: "knee Surgery",
 			cost: 10000
 		},
 		procedure2: {
-			name: "coldCheckup",
+			name: "cold Checkup",
 			cost: 10
+		},
+		procedure3: {
+			name: "brain transplant",
+			cost: 9999999999
+		},
+		procedure4: {
+			name: "upper endoscopy",
+			cost: 50000
 		}
 	};
 	var context = {};
 	for (var procedure in sampleProcedures) {
-		if (req.body.procedure == sampleProcedures[procedure].name) {
+		if (req.body.procedure.toUpperCase() == sampleProcedures[procedure].name.toUpperCase()) {
 			context.cost = sampleProcedures[procedure].cost;
 			context.name = sampleProcedures[procedure].name;
 		}
