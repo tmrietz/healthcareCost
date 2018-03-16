@@ -1,0 +1,160 @@
+            <br><br>
+
+            <div style="text-align:center";>
+            <h2>Create your Account</h2>
+            </div>
+            <br>
+            <div class="container" style="border:1px solid black";> 
+                <p>
+                   
+                    <form action="/created" method="POST">
+                      <br>
+                      <div class="form-row">
+
+                        <div class="form-group col-md-4">
+                          <label for="firstname">Name</label>
+                          <input type="firstname" class="form-control" id="fname" name="fname" placeholder="First" required>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                          <label for="lastname"><font color="white">n/a </label></font>
+                          <input type="lastname" class="form-control" id="lname" name="lname" placeholder="Last" required>
+                        </div>
+
+                      </div>  
+
+                      <div class="form-row"> 
+
+                          <div class="form-group col-md-4">
+                            <label for="email">Enter your email address</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email address" required>
+                          </div>                        
+
+                      </div>
+
+                      <div class="form-row"> 
+
+                          <div class="form-group col-md-4">  
+                            <label for="state">Select your state</label>
+                            <br>
+                            <select id="state" name="state" class="form-control">
+                                <option value="none">Select...</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>   
+                          </div>          
+
+                          <div class="form-group col-md-4">
+                            <label for="zip">Enter your zip code</label>
+                            <input type="text" pattern="[0-9]{5}" class="form-control" id="zip" name="zip" placeholder="Zip Code">
+                          </div>                
+
+                      </div>                      
+
+                      <div class="form-row"> 
+
+                          <div class="form-group col-md-4">
+                            <label for="bday">Enter your birthday</label>
+                            <input type="date" class="form-control" id="bday" name="bday" placeholder="mm/dd/yyyy">
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label for="insurance">Enter your health insurance provider</label>
+                            <input type="text" class="form-control" id="insurance" name="insurance" placeholder="Health Plan Provider">
+                          </div>                          
+
+                      </div>
+
+                      <br><br>
+                      <div class="form-row">  
+
+                        <div class="form-group col-md-4">
+                          <label for="username">Choose your username</label>
+                          <input type="username" class="form-control" id="username" name="username" placeholder="Username" required>
+                        </div>   
+
+                      </div>                       
+
+                      <div class="form-row">  
+
+                        <div class="form-group col-md-4">
+                          <label for="password">Create your password</label>
+                          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                        </div>    
+
+                        <div class="form-group col-md-4">
+                          <label for="confirmpassword">Confirm your password</label>
+                          <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required>
+                        </div>   
+
+                      </div>   
+
+                      <br>
+
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" value="" id="invalidCheck3" required>
+                          <label class="form-check-label" for="invalidCheck3">
+                            I agree to the <a href ="#TOS">Terms of Service</a>
+                          </label>
+
+                        </div>
+                      </div>
+
+                      <br>
+
+                      <button type="submit" class="btn btn-primary">Register</button>
+
+                    </form>
+                </p>
+            </div>
+        </div>

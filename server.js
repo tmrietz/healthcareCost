@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var helpers = require('./helpers.js')
 
 var app = express();
 app.set('port', 8913);
@@ -76,6 +77,41 @@ app.post('/localQuery', function(req, res){
 	res.render('queryResults', context);
 });
 
+app.get('/create_account', function(req,res){
+	var context = {};
+	res.render('create_account', context);
+});
+
+
+app.post('/created', function(req,res){
+	var context = {};
+	context.fname = req.body.fname;
+	context.lname = req.body.lname;
+	context.email = req.body.email;
+	context.state = req.body.state;
+	context.zip = req.body.zip;
+	context.bday = req.body.bday;
+	context.insurance = req.body.insurance;
+	context.username = req.body.username;
+	if(res.statusCode>=200 && res.statusCode<400){
+		if (helpers.email_valid(context.email)) {
+			context.header = "Creation Successful!";
+			context.message = "Your username is: ";
+			context.message2 = "Your registerd email is: "
+
+		}
+		else {
+			context.header = "Invalid email";
+			context.message = "Please go back and try again."
+			context.username = null;
+			context.email = null;
+		}
+		;
+	} else {
+		context.header = "Something went wrong.";
+	}
+	res.render('created', context);
+});
 
 app.use(function(req,res){
   res.status(404);
